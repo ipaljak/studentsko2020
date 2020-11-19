@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{K: Klasična Karantena}
+
+Uslijed globalne pandemije \textit{COVID-19}, nacionalni je stožer civilne
+zaštite donio novi niz smjernica i uputa s ciljem prevencije daljnjeg širenja
+zaraze među populacijom. Jedna od smjernica odnosi se na obavezno nošenje
+zaštitnih maski u svim ugostiteljskim objektima, što uključuje i gostionice,
+odnosno birtije.
+
+Na vratima jedne lokalne birtije odmah je osvanuo natpis \textbf{OBAVEZNO
+NOŠENJE MASKI!!!}. Međutim, budući da se radi samo o smjernicama, vlasnici
+birtije ne mogu natjerati svoje posjetitelje da nose maske. Primijetili su da
+se u birtiji trenutno nalazi $a$ ljudi koji nose maske i $b$ ljudi koji ne
+nose maske, te im je također poznato da će tijekom večeri u birtiju doći još
+$n$ ljudi. Duboko razumijevanje ljudske prirode uz dobro poznavanje vlastitih
+mušterija omogučilo je vlasnicima da s nevjerojatnom prezinošću zaključe kako
+će $i$-ti novopridošli gost staviti masku ako i samo ako se prije njegovog
+ulaska u birtiji nalazi $p_i\%$ ljudi koji nose mase.
+
+Nažalost, vlasnici birtije ne znaju kojim će redoslijedom gosti dolaziti u
+birtiju, ali znaju da nitko neće otići. Stoga ih zanima koji je najmanji,
+a koji najveći broj ljudi koji će u birtiji nositi maske nakon što uđe svih
+$n$ gostiju.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom se retku nalaze dva cijela broja $a$ i $b$ $(0 \le a, b \le 10^9)$ iz
+teksta zadatka.
+
+U drugom se retku nalazi prirodan broj $n$ $(1 \le n \le 500\,000)$ iz teksta
+zadatka.
+
+U $i$-tom od sljedećih $n$ redaka nalazi se realan broj $p_i$ $(0 \le p_i \le
+100)$ iz teksta zadatka. Svaki od brojeva $p_i$ bit će zapisan na dvije
+decimale te će slijediti znak \texttt{'\%'} (ASCII $37$).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U jednom je retku potrebno ispisati dva prirodna broja koji redom označavaju
+najmanji i najveći broj ljudi koji će u birtiji nositi maske nakon što uđe
+svih $n$ gostiju.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/K.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/K.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/K.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/K.dummy.out.2}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/K.dummy.in.3}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/K.dummy.out.3}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
