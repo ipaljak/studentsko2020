@@ -54,19 +54,29 @@ U jedini redak ispišite traženi broj iz teksta zadatka.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Examples
 \subsection*{Probni primjeri}
-\begin{tabularx}{\textwidth}{X'X'X}
+
+  \begin{tabularx}{\textwidth}{p{1cm}p{6.5cm}p{1cm}p{6.5cm}}
   \textbf{ulaz}
   \linespread{1}{\verbatiminput{test/F.dummy.in.1}}
   \textbf{izlaz}
   \linespread{1}{\verbatiminput{test/F.dummy.out.1}} &
+
+  \setlength\intextsep{-0.5cm}
+  \begin{wrapfigure}{l}{\textwidth}
+  %\centering
+  \includegraphics[width=0.35\textwidth]{img/dummy1.png}
+  \end{wrapfigure} &
+
   \textbf{ulaz}
   \linespread{1}{\verbatiminput{test/F.dummy.in.2}}
   \textbf{izlaz}
   \linespread{1}{\verbatiminput{test/F.dummy.out.2}} &
-  \textbf{ulaz}
-  \linespread{1}{\verbatiminput{test/F.dummy.in.3}}
-  \textbf{izlaz}
-  \linespread{1}{\verbatiminput{test/F.dummy.out.3}}
+
+  \setlength\intextsep{-0.5cm}
+  \begin{wrapfigure}{l}{\textwidth}
+%  \centering
+  \includegraphics[width=0.35\textwidth]{img/dummy2.png}
+  \end{wrapfigure}
 \end{tabularx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
