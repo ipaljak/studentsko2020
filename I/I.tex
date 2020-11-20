@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{I: Izvanredna Isplata}
+
+Međunarodne olimpijade nisu prilika samo natjecateljima da pokažu svoje znanje,
+već i gospodinu Malnaru koji željno iščekuje isprobati specijalitete u novoj
+državi. Kako bi bio spreman na plaćanje skupocjenih večera, odlučio je prije
+puta pretvoriti dio novca u valutu nadolazeće države.
+
+U su toj državi svi iznosi prirodni brojevi te postoji $n$ različitih
+vrijednosti kovanica $c_1 < c_2 < \dots < c_n$ koje se koriste za
+isplaćivanje iznosa. Novčanik gospodina Malnara možemo zamisliti kao
+beskonačan izvor novaca, gdje on na raspolaganju ima proizvoljno mnogo
+kovanica svake vrijednosti. Kako bi isplatio iznos, gospodin Malnar izabrat
+će neki broj kovanica koje u zbroju daju \textbf{točan iznos}. Dodatno
+vrijedi $c_1 = 1$, što osigurava da je svaki iznos moguće isplatiti.
+
+Gospodin Malnar se ne zamara previše s izborom kovanica pa koristi sljedeći
+pohlepni algoritam za isplaćivanje nekog iznosa -- bira najveću kovanicu koja
+ne prelazi iznos koji je potrebno isplatiti, a za preostali dio iznosa
+ponavlja ovaj postupak sve dok ga ne isplati do kraja. Budući da gospodin
+Malnar ne voli osjećaj prljavog novca u rukama, njemu bi bilo idealno kada bi
+svaki mogući iznos njegov pohlepni algoritam isplatio koristeći minimalan
+broj kovanica. Takav sustav kovanica gospodin Malnar smatra
+\textit{izvanrednim}.
+
+Gospodin Malnar je zasad bio u $t$ država i za svaku od njih poznaje tamošnji
+sustav kovanica. Ispišite za svaku državu \texttt{"DA"} ili \texttt{"NE"}
+ovisno o tome je li sustav kovanica u toj državi izvanredan.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom je retku prirodan broj $t$ $(1 \le t \le 100)$ iz teksta zadatka.
+
+Slijedi $t$ opisa država pri čemu je svaka država opisana s dva retka. U prvom
+je prirodan broj $n$ $(1 \le n \le 10\,000)$, a u drugom su
+prirodni brojevi $1 = c_1 < c_2 < \dots < c_n \le 10\,000$ iz teksta zadatka.
+Zbroj svih vrijednosti $n$ po svim državama \textbf{ne prelazi} $10\,000$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+Ispišite $t$ redaka, za svaku državu odgovor na pitanje je li sustav
+kovanica izvanredan.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjer}
+\begin{tabularx}{\textwidth}{X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/I.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/I.dummy.out.1}}
+\end{tabularx}
+\textbf{Pojašnjenje probnog primjera:} u trećoj državi iznos $6$ moguće je
+isplatiti koristeći dvije kovanice $(6 = 3 + 3)$, no pohlepni algoritam koristi
+tri kovanice $(6 = 4 + 1 + 1)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
