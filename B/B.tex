@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{B: Brzi Biljar}
+
+Biljarski stol kvadratnog oblika nalazi se u koordinatnoj ravnini, a njegovi
+vrhovi imaju koordinate $(L,L)$, $(L,-L)$, $(-L,L)$ i $(-L,-L)$. Trenutno se
+na stolu u točki $(x_1, y_1)$ nalazi i miruje biljarska kugla, dok se u točki
+$(x_2, y_2)$ nalazi rupa. Za kuglu i rupu vrijedi da nisu na rubu stola te da
+se nalaze na različitim pozicijama.
+
+Udarimo li kuglu, ona će se početi kretati pravocrtno. Ako dođe do ruba stola,
+odbija se tako da je kut upada jednak kutu refleksije te se nastavlja kretati
+pravocrtno. Staje tek kada se nađe u jednom od četiriju vrhova stola ili u
+rupi.
+
+Koristeći svoju veliku snagu, gospodin Malnar je jednom prilikom toliko jako
+udario kuglu da nitko osim njega nije uspio vidjeti putanju kugle. Jedino
+znano je da je kugla završila u rupi, a preživjeli svjedoci dodatno tvrde da
+su pomoću frekvencije zvuka nastalog zbog brzog udaranja kugle mogli
+zaključiti da se kugla tijekom svoje putanje od ruba stola odbila najviše $n$
+puta.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{img/biljar.png}
+\caption{Slika prikazuje sve moguće putanje za prvi probni primjer kada je $k=1$.}
+\end{figure}
+
+Analitičare zanima na koje se sve načine kugla mogla kretati. Odredite, za
+svaki prirodni broj $k \le n$, koliko postoji različitih putanja kugle na
+kojima se ona od ruba stola odbila točno $k$ puta. Moguće je dokazati da su
+svi odgovori konačni brojevi koji stanu u $32$-bitni tip podatka.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom su retku brojevi $L$ $(2 \le L \le 1\,000\,000)$ i $n$ $(1 \le n \le
+500)$ iz teksta zadatka.
+
+U drugom su retku cijeli brojevi $x_1$, $y_1$, $x_2$, $y_2$ $(-L \le x_1,
+y_1, x_2, y_2 \le L)$ iz teksta zadatka. Vrijedi da $(x_1, y_1) \ne (x_2, y_2)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+Ispišite $n+1$ brojeva odvojenih razmakom koji redom, od $k=0$ do $k=n$,
+predstavljaju broj različitih putanja kugle uz točno $k$ odbijanja.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/B.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/B.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/B.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/B.dummy.out.2}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
