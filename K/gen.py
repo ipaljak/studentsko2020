@@ -86,8 +86,8 @@ def gen_cases():
 
     for n in [50, 500, 5000, 50000, 500000]:
         real.append(gen_rand(n, 0, 0))
-        for i in range(4):
-            real.append(gen_rand(n, random.randint(0, 10**9), random.randint(0, 10**9)))
+        for i in range(6):
+            real.append(gen_rand(n, random.randint(0, 10**i), random.randint(0, 10**i)))
 
     for i, test in enumerate(real):
         test.validate()
