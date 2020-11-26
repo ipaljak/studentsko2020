@@ -31,7 +31,7 @@ int main(void) {
     scanf("%d%d", &x[i], &y[i]);
 
   for (int i = 0; i < n; ++i) {
-    if (y[i] > r) continue;
+    if (abs(y[i]) > r) continue;
     double lo = (double) x[i] - sqrt((llint) r * r - (llint) y[i] * y[i]);
     double hi = (double) x[i] + sqrt((llint) r * r - (llint) y[i] * y[i]);
     event.emplace_back(lo, 1);

@@ -17,7 +17,7 @@ int main(){
 	scanf("%d%Lf", &n, &r);
 	for(int i = 0;i < n;i++){
 		ld x, y; scanf("%Lf%Lf", &x, &y);
-		if(y <= r){
+		if(abs(y) <= r){
 			ld pom = sqrt(r * r - y * y);
 			v.push_back({x + pom, 1});
 			v.push_back({x - pom, 0});
