@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 
 #define PB push_back
 
@@ -17,7 +18,7 @@ int main(){
 	for(int i = 0;i < n;i++){
 		double x; char bla;
 		scanf("%lf %c", &x, &bla);
-		v.PB((int)(x * 100));
+		v.PB((int) round(x * 100));
 	}
 	sort(v.rbegin(), v.rend());
 	A = sA, B = sB;
