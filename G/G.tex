@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{G: Gospodar Gljiva}
+
+Gospodin Malnar odlučio je ove godine organizirati novogodišnju proslavu na
+koju će pozvati svojih $n$ najboljih prijatelja. Budući da se radi o
+\textbf{najluđoj noći} u godini, svakom će prijatelju pokloniti jednu gljivu
+pomoću koje će taj prijatelj naručenu pizzu margheritu pretvoriti u capricciosu.
+
+Gospodin Malnar inače posjeduje beskonačno mnogo gljiva, a svaku je od njih
+označio različitim nenegativnim cijelim brojem. Prije početka same zabave,
+gljive će staviti u vreću iz koje će svaki gost izvući svoju gljivu.
+Nažalost, nije uspio nabaviti dovoljno veliku vreću u koju bi stale sve
+gljive i sada nikako ne može odrediti koje će gljive staviti u vreću. Nakon
+što je još malo razmislio, donio je sljedeću odluku:
+
+\begin{itemize}
+    \item Prije početka zabave u vreći će se nalaziti točno $n$ gljiva.
+    \item Ako se u vreći nalazi gljiva s oznakom $x$, tada se u vreći mora
+      nalaziti i gljiva s oznakom $\lfloor \frac{x}{k} \rfloor$.
+\end{itemize}
+
+Pomozite gospodinu Malnaru i odredite na koliko različitih načina može
+pripremiti vreću gljiva za novogodišnju zabavu.
+
+\textbf{Napomena:} Budući da traženi broj načina može biti vrlo velik, potrebno
+je samo ispisati njegov ostatak pri djeljenju s $10^9+7$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom su retku prirodni brojevi $n$ $(2 \le n \le 1\,000\,000)$ i $k$
+$(1 \le k \le 1\,000\,000)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U prvom retku ispišite traženi broj načina modulo $10^9 + 7$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/G.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/G.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/G.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/G.dummy.out.2}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
