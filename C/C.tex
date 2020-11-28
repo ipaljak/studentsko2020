@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{C: Carska Civilizacija}
+
+Nakon apokalipse došlo je vrijeme za uzdizanje nove civilizacije predvođene
+gospodinom Malnarom. Prvo što će napraviti je obnoviti tramvajsku mrežu u
+glavnoj ulici svoga carstva.
+
+Određeno je $n$ potencijalnih mjesta uzduž ulice, a gospodin Malnar izabrat će
+neka od njih na kojima će izgraditi tramvajske postaje. Već je određeno da će
+se na prvom i $n$-tom mjestu nalaziti okretišta pa ta mjesta svakako moraju
+biti odabrana.
+
+Za svako mjesto poznate su vrijednosti $x_i$ i $c_i$, gdje $x_i$ predstavlja
+udaljenost tog mjesta od početka ulice, a $c_i$ predstavlja nezadovoljstvo
+stanovnika kada bi postaja bila na tom mjestu. Naime, kod nekih postaja
+nalaze se kiosci čiji prodavači uvijek podvale skupe karte, a kod nekih
+odlične pekare.
+
+Postoji ukupno $m$ stanovnika koji će koristiti planiranu liniju pa je gospodin
+Malnar odlučio pitati svakog od njih za mišljenje. Saznao je da $i$-ti
+stanovnik mrzi vožnje duljine $d_i$ te ocjenjuje izbor postaja na sljedeći
+način:
+
+\begin{itemize}
+    \item ukupno zadovoljstvo tog stanovnika jednako je zbroju zadovoljstva za
+          svaki par uzastopnih izabranih postaja
+    \item zadovoljstvo sa dvije uzastopne izabrane postaje koje su udaljene za
+          $d$ jednako je $|d - di|$
+\end{itemize}
+
+Ukupno zadovoljstvo gospodin Malnar računa tako da zbroji zadovoljstva svih $m$
+stanovnika te na kraju oduzme nezadovoljstva $c_k$ svih postaja $k$ koje su
+odabrane. Ispišite maksimalno zadovoljstvo koje gospodin Malnar može postići
+uz optimalan izbor postaja.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+ U prvom su retku prirodni brojevi $n$ $(2 \le n \le 100\,000)$ i $m$
+$(1 \le m \le 100\,000)$ iz teksta zadatka.
+
+Slijedi redak s $m$ brojeva $d_i$ $(0 \le d_i \le 10^7)$ iz teksta zadatka.
+
+Slijedi $n$ redaka koji opisuju potencijalne postaje. Svaka postaja opisana je
+pozicijom $x_i$ $(0 \le x_i \le 10^7)$ i nezadovoljstvom $c_i$ $(0 \le |c_i|
+\le 10^{12})$. Dodatno vrijedi $x_1 \le x_2 \le \ldots \le x_n$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U jedinom retku ispišite najveće moguće zadovoljstvo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.out.2}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.in.3}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.out.3}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
