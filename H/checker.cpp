@@ -94,6 +94,7 @@ void checker(ifstream &fin, ifstream &foff, ifstream &fout) {
   for (int i = 0; i < n; ++i) {
     int x;
     if (!(fout >> x)) finish(0);
+    if (x < 1 || x > n) finish(0);
     sol.push_back(x);
   }
 
