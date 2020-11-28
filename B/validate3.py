@@ -18,6 +18,7 @@ def check(lines):
     assert (-l < y1 < l), "y1 kriv"
     assert (-l < x2 < l), "x2 kriv"
     assert (-l < y2 < l), "y2 kriv"
+    assert x1 != x2 or y1 != y2, "iste tocke"
     nl.append("{} {} {} {}{}".format(x1, y1, x2, y2, E))
 
     assert lines == nl, "Krivi format (%s vs %s)" % (lines, nl)
