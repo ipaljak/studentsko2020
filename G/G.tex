@@ -19,8 +19,8 @@ gljive i sada nikako ne može odrediti koje će gljive staviti u vreću. Nakon
 
 \begin{itemize}
     \item Prije početka zabave u vreći će se nalaziti točno $n$ gljiva.
-    \item Ako se u vreći nalazi gljiva s oznakom $x$, tada se u vreći mora
-      nalaziti i gljiva s oznakom $\lfloor \frac{x}{k} \rfloor$.
+    \item Ako se u vreći nalazi gljiva s oznakom $x > 0$, tada se u vreći mora
+      nalaziti i gljiva s oznakom $\lfloor \frac{x-1}{k} \rfloor$.
 \end{itemize}
 
 Pomozite gospodinu Malnaru i odredite na koliko različitih načina može
@@ -53,6 +53,8 @@ U prvom retku ispišite traženi broj načina modulo $10^9 + 7$.
   \textbf{izlaz}
   \linespread{1}{\verbatiminput{test/G.dummy.out.2}}
 \end{tabularx}
+
+\textbf{Pojašnjenje prvog probnog primjera:} moguće vreće su $\{0, 1, 2\}$, $\{0, 1, 3\}$, $\{0, 1, 4\}$, $\{0, 2, 5\}$ i $\{0, 2, 6\}$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % We're done
